@@ -30,6 +30,19 @@ public class Solution extends SimpleFileVisitor<Path> {
         }
     }
 
+    @Override
+    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+        if (file.toString().endsWith(".zip") || file.toString().endsWith(".rar"))
+            archived.add(file.toString());
+        return super.visitFile(file, attrs);
+    }
+
+    @Override
+    public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
+        failed.add(file.toString());
+        return FileVisitResult.SKIP_SUBTREE;
+    }
+
     private List<String> archived = new ArrayList<>();
     private List<String> failed = new ArrayList<>();
 
