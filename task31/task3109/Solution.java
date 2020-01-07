@@ -2,7 +2,6 @@ package com.javarush.task.task31.task3109;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
