@@ -21,6 +21,14 @@ public class Tetris {
         this.figure = figure;
     }
 
+    public void run() {
+
+    }
+
+    public void step() {
+        
+    }
+
     public static void main(String[] args) {
         
     }
