@@ -7,7 +7,7 @@ public class Canvas {
     public Canvas(int width, int height) {
         this.width = width;
         this.height = height;
-        matrix = new char[height][width];
+        this.matrix = new char[height][width];
     }
 
     public int getWidth() {
@@ -38,5 +38,20 @@ public class Canvas {
                  }
             }
         }
+    }
+
+    public void clear() {
+        this.matrix = new char[height][width];
+    }
+
+    public void print() {
+        for (int j = 0; j < this.matrix.length; j++) {
+            for (int i = 0; i < this.matrix[0].length; i++) {
+                System.out.print(this.matrix[j][i]);
+            }
+            System.out.print("\n");
+        }
+        System.out.println();
+        System.out.println();
     }
 }
