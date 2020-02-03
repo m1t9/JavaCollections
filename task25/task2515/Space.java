@@ -58,6 +58,10 @@ public class Space {
 
     }
 
+    public void drawMatrix(double x, double y, int[][] matrix, char c) {
+
+    }
+
     public static void main(String[] args) {
         
     }
