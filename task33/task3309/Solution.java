@@ -33,7 +33,7 @@ public class Solution {
         Document document = documentBuilder.newDocument();
         marshaller.marshal(obj, document);
 
-        NodeList nodeList = document.getElementsByTagName("*");
+        NodeList nodeList = document.getElementsByTagName("*"); // tagname - The name of the tag to match on. The special value "*" matches all tags.
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
             replaceNode(node, document);
